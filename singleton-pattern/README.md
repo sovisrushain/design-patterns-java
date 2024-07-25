@@ -64,9 +64,9 @@ BasicSingleton@53d2ecb9
 ```
 ### Explanation of the Issue
 
-In the multi-threaded example, multiple threads are trying to access the getInstance method simultaneously. If the instance is null, multiple threads may enter the if (instance == null) block simultaneously, leading to the creation of multiple instances of BasicSingleton.
+In the multi-threaded example, multiple threads are trying to access the getInstance method simultaneously. If the instance is null, multiple threads may enter the **if (instance == null)** block simultaneously, leading to the creation of multiple instances of BasicSingleton.
 
-This occurs because the check-and-create operation (if (instance == null) { instance = new BasicSingleton(); }) is not atomic, meaning it is not executed as a single, indivisible operation. As a result, two or more threads can see instance as null and proceed to create separate instances.
+This occurs because the check-and-create operation **(if (instance == null) { instance = new BasicSingleton(); })** is not atomic, meaning it is not executed as a single, indivisible operation. As a result, two or more threads can see instance as null and proceed to create separate instances.
 
 
 ## Thread-Safe Singleton Pattern
