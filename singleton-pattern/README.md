@@ -87,11 +87,7 @@ public class ThreadSafeSingleton {
     }
 }
 ```
-```angular2html
-ThreadSafeSingleton@b33f562
-ThreadSafeSingleton@b33f562
-ThreadSafeSingleton@b33f562
-```
+
 ### Explanation
 1. **Private Static Instance:** The instance variable is a private static member of the class, ensuring only one instance exists.
 2. **Private Constructor:** The constructor is private, preventing instantiation from outside the class.
