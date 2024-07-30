@@ -15,7 +15,7 @@ The Abstract Factory Pattern involves creating a set of related factory interfac
 ### Example: GUI Factory
 We'll implement an abstract factory pattern for creating different types of GUI components like Buttons and Checkboxes for different operating systems like Windows and Mac.
 
-Step 1: Define Abstract Products
+**Step 1:** Define Abstract Products
 
 ```angular2html
 public interface Button {
@@ -26,7 +26,7 @@ public interface Checkbox {
     void paint();
 }
 ```
-Step 2: Implement Concrete Products
+**Step 2:** Implement Concrete Products
 
 ```angular2html
 public class MacButton implements Button {
@@ -57,7 +57,7 @@ public class WindowsCheckbox implements Checkbox {
     }
 }
 ```
-Step 3: Define the Abstract Factory
+**Step 3:** Define the Abstract Factory
 
 ```angular2html
 public interface GUIFactory {
@@ -65,7 +65,7 @@ public interface GUIFactory {
     Checkbox createCheckbox();
 }
 ```
-Step 4: Implement Concrete Factories
+**Step 4:** Implement Concrete Factories
 ```angular2html
 public class MacFactory implements GUIFactory {
     @Override
@@ -92,7 +92,7 @@ public class WindowsFactory implements GUIFactory {
 }
 ```
 
-Step 5: Create the Client Code
+**Step 5:** Create the Client Code
 ```angular2html
 public class Application {
     private final Button button;
@@ -134,6 +134,6 @@ public class AbstractFactoryDemo {
 5. **Client Code:** The Application class uses the abstract factory to create and use products without knowing their concrete classes. The AbstractFactoryDemo class demonstrates how the client code can work with different factories based on the operating system.
 
 ## Advantages of Abstract Factory Pattern
-1. Isolates Clients from Concrete Classes: The client code works with abstract interfaces and is independent of the concrete classes.
-2. Exchanges Product Families Easily: It is easy to switch between different families of products without changing the client code.
-3. Ensures Consistency Among Products: Products created by a particular factory are consistent and compatible with each other.
+1. **Isolates Clients from Concrete Classes:** The client code works with abstract interfaces and is independent of the concrete classes.
+2. **Exchanges Product Families Easily:** It is easy to switch between different families of products without changing the client code.
+3. **Ensures Consistency Among Products:** Products created by a particular factory are consistent and compatible with each other.
