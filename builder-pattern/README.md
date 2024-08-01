@@ -6,7 +6,7 @@ The Builder Pattern is useful when you need to construct an object that requires
 
 ### Example
 
-First, we define the House class, which will be the product constructed by the builder:
+First, we define the **House** class, which will be the product constructed by the builder:
 
 ```angular2html
 public class House {
@@ -63,12 +63,13 @@ public class House {
 
 ### Explanation
 
-1. House Class: This is the product class with private fields and a private constructor that takes a HouseBuilder object.
-2. HouseBuilder Class: This static nested class contains the same fields as House and methods for setting these fields. Each method returns the HouseBuilder object itself (this), allowing method chaining.
-3. build Method: This method constructs the final House object using the builder's current state.
+1. **House Class:** This is the product class with private fields and a private constructor that takes a HouseBuilder object.
+2. **HouseBuilder Class:** This static nested class contains the same fields as House and methods for setting these fields. Each method returns the HouseBuilder object itself (this), allowing method chaining.
+3. **build Method:** This method constructs the final House object using the builder's current state.
 
 
 ### Usage
+To use the builder to construct a **House** object:
 
 ```angular2html
 public class BuilderPatternDemo {
@@ -85,14 +86,14 @@ public class BuilderPatternDemo {
 }
 ```
 ### Explanation of Usage
-1. Create Builder Instance: We create a new instance of HouseBuilder.
-2. Set Attributes: We set the attributes of the house using the builder methods.
-3. Build the House: We call the build method to get the final House object.
-4. Output: Finally, we print the House object, which shows the set attributes.
+1. **Create Builder Instance:** We create a new instance of HouseBuilder.
+2. **Set Attributes:** We set the attributes of the house using the builder methods.
+3. **Build the House:** We call the build method to get the final House object.
+4. **Output:** Finally, we print the House object, which shows the set attributes.
 
 ## Benefits of Builder Pattern
 
-1. Readability: The code for constructing an object is more readable and understandable.
-2. Flexibility: The same construction process can create different representations.
-3. Immutability: The final object can be immutable if desired, as it's only constructed once with all required attributes.
-4. Reduced Complexity: The construction process is separated from the object, reducing the complexity of object creation.
+1. **Readability:** The code for constructing an object is more readable and understandable.
+2. **Flexibility:** The same construction process can create different representations.
+3. **Immutability:** The final object can be immutable if desired, as it's only constructed once with all required attributes.
+4. **Reduced Complexity:** The construction process is separated from the object, reducing the complexity of object creation.
